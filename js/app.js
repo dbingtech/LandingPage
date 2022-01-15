@@ -22,7 +22,7 @@
  * Define Global Variables
  * 
 */
-
+const newVariable = 0;
 
 /**
  * End Global Variables
