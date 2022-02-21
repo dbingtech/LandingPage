@@ -1,0 +1,29 @@
+#nav_list {
+  /*border: 2px solid green;*/
+  display: flex;
+  flex-direction: row;
+  justify-self: column;
+}
+.line_item {
+  margin: 5px 20px;
+  list-style-type: none; /*removes ul dots*/
+}
+#nav_list li a {
+  text-decoration: none; /*removes link underline */
+  font-size: 18px;
+}
+
+#nav_list li :link {
+  color: #e6e6e6;
+}
+#nav_list li :visited {
+  color: purple;
+}
+#nav_list li :hover {
+  color: yellow;
+  font-weight: bold;
+}
+#nav_list li :active {
+  color: red;
+  font-weight: bold;
+}
