@@ -1,0 +1,16 @@
+.footer {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+  }
+  .copyright {
+    padding-bottom: 10px;
+  }
+  .socialmedia {
+    justify-content: center;
+  }
+  .socialicons {
+    height: 25px;
+  }
