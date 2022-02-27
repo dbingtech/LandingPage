@@ -3,7 +3,7 @@
 //creates a element and assigns to listItemHref
 const listItemHref = document.createElement('a');
 //assigns #nav_list or ul to variable navList
-const navList = document.querySelector('#nav_list');
+const navList = document.querySelector('#nav_ul');
 //creates array from id's in section elements
 const sectionIds = Array.from(document.getElementsByTagName('section'));
 
@@ -36,66 +36,39 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += "active";
     });
 });
-// document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         document.querySelector(this.getAttribute('href')).classList.add('active');
 
-//     });
-// });
-// activeLink.forEach((li) => {
-//     li.classList.remove('active');
-//     if (li.classList.contains()) {
-//         li.classList.add('active');
-//     }
-// })
-// console.log(navList);
-// const activeLink = document.querySelectorAll('line_item');
-// // console.log(navList);
-// for (var i=0;i <activeLink.length;i++) {
-//     activeLink[i].addEventListener('click', function(){
-//         var current = document.getElementsByClassName("active");
-//         current[0].className = current[0].className.replace(" active", "");
-//         this.className += " active";
-//     });
-// }
-// // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_active_element
-// const selectClass = document.querySelectorAll('a[href*="#"]');
-// const clickableLink = document.querySelector('href'));
-// const activeLink = querySelectorAll("a");
-// for (var i = 0; i < activeSection.length; i++) {
-//   activeLink[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// }
+//assign Active Class  https://youtu.be/AuwKkezuhS8 - Study Web Today
+const li = document.querySelectorAll('.line_item');
+const sec = document.querySelectorAll('section');
 
+function activeMenu() {
+    let len = sec.length;
+    while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
+    li.forEach(ltx => ltx.classList.remove('active'));
+    li[len].classList.add('active');
+}
+activeMenu()
+window.addEventListener('scroll', activeMenu);
 
+//Home button to get back to top
+var mybutton = document.getElementById("buttontotop"); //creates Home button
 
+window.onscroll = function() {scrollFunction()}; //Button shows when scrolling down
 
+function scrollFunction() { //function 
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+}
+function topFunction() { //when clicked, goes to top of page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
-// const active_section = document.querySelectorAll("section");
-//   forEach(section => {
-//     if(section.addEventListener("click", function(){
-//       this.classList.add("active");
-//     }));
-//   });
-
-
-
-
-// const activeSection = window.location.pathname;
-// const navLinks = document.querySelectorAll('nav a').
-// forEach(link => {
-//   if(link.href.includes(`${activeSection}`)){
-//     link.classList.add('active');
-//   }
-// })
 
 
 
