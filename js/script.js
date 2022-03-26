@@ -41,13 +41,13 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
 
 //assign Active Class  https://youtu.be/AuwKkezuhS8 - Study Web Today
 const li = document.querySelectorAll('.line_item');
-const sec = document.querySelectorAll('section');
+const active_section = document.querySelectorAll('section');
 
 function activeMenu() {
-    let len = sec.length;
-    while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
+    let l = active_section.length;
+    while (--l && window.scrollY + 97 < active_section[l].offsetTop) {}
     li.forEach(ltx => ltx.classList.remove('active'));
-    li[len].classList.add('active');
+    li[l].classList.add('active');
 }
 activeMenu()
 window.addEventListener('scroll', activeMenu);
@@ -57,7 +57,7 @@ var mybutton = document.getElementById("buttontotop"); //creates Home button
 
 window.onscroll = function() {scrollFunction()}; //Button shows when scrolling down
 
-function scrollFunction() { //function 
+function scrollFunction() { //function to display button once below 10 px
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
       mybutton.style.display = "block";
     } else {
@@ -68,8 +68,3 @@ function topFunction() { //when clicked, goes to top of page
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-
-
-
-//add footer, social icons, and copyright
