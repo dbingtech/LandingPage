@@ -1,21 +1,20 @@
 @import url("navigation.css");
 @import url("footer.css");
+@import url("responsive.css");
 
-/* @import url("responsive.css"); */
 * {
   /* border: 1px dashed purple; */
   font-family: "Roboto", sans-serif;
   color: #5b0e2d;
   scroll-behavior: smooth;
 }
-
 body {
   background-color: #ffa781;
 }
 h1 {
   font-size: 46px;
   color: #efc8b1;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 h2 {
   font-size: 32px;
@@ -33,7 +32,7 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 125vh;
   padding: 0;
 }
 #buttontotop {
