@@ -19,4 +19,4 @@ There are no specific instructions.  One will have to download the files and run
 1. Dynamically built li elements in navigation
 2. Use the section titles to label the navigation elements
 3. Show the active section in the navigation
-4. Us scrolling effect when switching sections
+4. Use scrolling effect when switching sections
