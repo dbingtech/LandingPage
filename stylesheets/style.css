@@ -1,6 +1,7 @@
 @import url("navigation.css");
 @import url("footer.css");
 @import url("responsive.css");
+@import url("active.css");
 
 * {
   /* border: 1px dashed purple; */
@@ -8,25 +9,33 @@
   color: #5b0e2d;
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #ffa781;
 }
+
 h1 {
-  font-size: 46px;
+  font-size: 38px;
   color: #efc8b1;
   /* padding-left: 10px; */
 }
+
 h2 {
   font-size: 32px;
 }
+
 body {
-  margin: 0 auto;
-  max-width: 1024px;
-  width: 90%;
-}
-p{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+};
+
+p {
   font-size: 20px;
 }
+
 section {
   display: flex;
   justify-content: center;
@@ -35,6 +44,7 @@ section {
   min-height: 125vh;
   padding: 0;
 }
+
 #buttontotop {
   display: none;
   position: fixed;
@@ -45,11 +55,19 @@ section {
   border: none;
   outline: none;
   /* background-color: black; */
-  /* cursor: pointer; */
+  cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
 #buttontotop:hover {
   background-color: #555;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: white;
 }
