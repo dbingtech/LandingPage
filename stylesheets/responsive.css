@@ -1,67 +1,67 @@
-@media(max-width: 460px){
+@media screen and (max-width: 940px){
+    .container {
+        position: relative;
+    }
+    .nav_menu{
+        background-color: #514644;
+    }
+    #nav_ul {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 92%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
     #page_title {
         font-size: 1.2em;
-        padding-top:5px;
-        margin:0;
+        margin-left:20px;
+    }
+    #nav_ul.now-active {
+        background-color: #514644;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .line_item {
+        text-align: center;
+        line-height: 50px;
+        width: 90%;
+        display: table;
+        padding: 0;
+    }
+    .line_item:hover {
+        background-color: red ;
+        color: white;
+        border-radius: 5px;
+        transition: all 0.4s ease-out;
     }
     .main_head {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+        width: 100%;
     }
-    #nav_ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 0;
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
     }
-    #nav_ul li a {
-        font-size: .9em;
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
     }
-    section {
-        min-height: 100vh;
-        padding: 0;
-        margin:0;
-      }
-    h2 {
-        font-size: 1em;
-        margin: 0;
-        /* min-height: 10vh; */
+    .menu-toggle:hover {
+        cursor: pointer;
     }
-    .text {
-        font-size: 14px;
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
     }
-}
-
-@media(max-width: 860px){
-    #page_title {
-        font-size: 1.7em;
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
-    .main_head {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    #nav_ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 0;
-    }
-    #nav_ul li a {
-        font-size: 1.3em;
-    }
-    section {
-        min-height: 100vh;
-        padding: 0;
-        margin: 0;
-      }
-    section h2 {
-        font-size: 1.6em;
-        margin: 0;
-        height: 50%;
-    }
-    .text {
-        font-size: 1.3em;
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
