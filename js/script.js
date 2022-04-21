@@ -7,6 +7,15 @@ const navList = document.querySelector('#nav_ul');
 //creates array from id's in section elements
 const sectionIds = Array.from(document.getElementsByTagName('section'));
 
+//Responsive menu
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('#nav_ul');
+
+menu.addEventListener('click', function(){
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('now-active');
+})
+
 //Given to me by Mentor, 'Mohammad A' with some edits.
 //For loop to find innerHTML and attributes from sections
 for (section of sectionIds){
@@ -53,7 +62,7 @@ activeMenu()
 window.addEventListener('scroll', activeMenu);
 
 //Home button to get back to top
-var mybutton = document.getElementById("buttontotop"); //creates Home button
+let mybutton = document.getElementById("buttontotop"); //creates Home button
 
 window.onscroll = function() {scrollFunction()}; //Button shows when scrolling down
 
@@ -68,3 +77,8 @@ function topFunction() { //when clicked, goes to top of page
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
+
+//add footer, social icons, and copyright
