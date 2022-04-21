@@ -1,4 +1,4 @@
-nav .page_header ul li.active {
-  background-color: green;
-  border: 2px solid black;
+.active {
+  background-color: black;
+  border-radius: 5px;
 }
